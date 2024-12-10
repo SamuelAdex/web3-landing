@@ -12,8 +12,9 @@ const Header = () => {
   return (
     <header className='w-full fixed top-0 bg-white z-30'>
         <div className='flex justify-between items-center md:w-[95%] m-auto px-3 md:py-6 py-3'>
-            <div className='flex-[2]'>
+            <div className='flex-[2] relative'>
                 <img className='md:w-[200px] w-[120px]' src={trustLogo} alt="" />
+                <div className='absolute md:text-[10px] text-[8px] px-3 text-black bg-white rounded-full font-[800] md:bottom-[14px] bottom-[2px] md:right-[14rem] right-[10rem] shadow-md'>QRESTORE</div>
             </div>
 
             <div className='flex items-center md:flex-[4] text-[16px] gap-8'>

@@ -55,7 +55,7 @@ const Footer = () => {
             </div>
             <div className='md:mt-10 mt-5'>
                 <div className=''>
-                    <div className='font-[700] md:text-[14px] text-[12px]'>Download trust Wallet</div>
+                    <div className='font-[700] md:text-[14px] text-[12px]'>Download trust-QRestore Wallet</div>
                     <div className='md:text-[12px]'>The most trusted & secure crypto wallet</div>
                 </div>
                 <div className=''>
