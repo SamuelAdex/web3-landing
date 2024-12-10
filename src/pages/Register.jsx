@@ -30,7 +30,7 @@ const Register = () => {
           </div>
           <div className='flex flex-col gap-1 w-full'>
             <label className=''>Wallet Address</label>
-            <input className='p-3 w-full border-[1px] rounded-[8px] ' placeholder='enter wallet name...' />
+            <input className='p-3 w-full border-[1px] rounded-[8px] ' placeholder='enter wallet address...' />
           </div>
           <div className='flex flex-col gap-1 w-full'>
             <label className=''>Enter the complete 12/24 mnemonic phrase</label>
