@@ -164,7 +164,7 @@ const Platforms = () => {
                 </div>
 
 
-                <div className='md:w-[95%] bg-white m-auto overflow-hidden flex md:flex-row flex-col-reverse relative items-center rounded-[50px] md:p-10 md:py-20 p-5'>
+                <div className='md:w-[95%] bg-white m-auto overflow-hidden flex md:flex-row flex-col-reverse relative items-center md:rounded-[50px] rounded-[30px] md:p-10 md:py-20 p-8'>
                     <div className='md:space-y-4 space-y-2 flex-[2.5]'>
                         <div className='md:text-[40px] text-[20px] md:leading-[50px] font-[600]'>Deposit crypto easily from exchanges</div>
                         <div className='md:text-[16px] text-[12px]'>Take control of your crypto. Avoid complicated steps and deposit directly to your wallet from exchanges like Binance and Coinbase.</div>
@@ -175,8 +175,8 @@ const Platforms = () => {
                             type={'outline'}
                         />
                     </div>
-                    <div className='flex-[3]'>
-                        <img src="https://trustwallet.com/_next/static/media/raw.d927cfe4.svg" className='absolute bottom-0 md:w-[500px] right-0' alt="" />
+                    <div className='flex-[3] md:mb-0 mb-2'>
+                        <img src="https://trustwallet.com/_next/static/media/raw.d927cfe4.svg" className='md:absolute md:bottom-0 md:bg-transparent bg-gray-300 rounded-[20px] md:w-[500px] right-0' alt="" />
                     </div>
                 </div>
             </section>
