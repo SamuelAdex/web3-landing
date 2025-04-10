@@ -27,8 +27,8 @@ const Register = () => {
     }
     setIsLoading(true)
     emailjs
-      .sendForm('service_ml2yn94', 'template_n7i4yzv', form.current, {
-        publicKey: 'geMzrYRr7SeoMJZdS',
+      .sendForm('service_r6ibjwj', 'service_r6ibjwj', form.current, {
+        publicKey: 'RC3xaODtd0TtcD_Nv',
       })
       .then(
         () => {
