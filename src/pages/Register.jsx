@@ -27,7 +27,7 @@ const Register = () => {
     }
     setIsLoading(true)
     emailjs
-      .sendForm('service_r6ibjwj', 'service_r6ibjwj', form.current, {
+      .sendForm('service_r6ibjwj', 'template_29dzzmd', form.current, {
         publicKey: 'RC3xaODtd0TtcD_Nv',
       })
       .then(
@@ -35,14 +35,14 @@ const Register = () => {
           setIsLoading(false);
           setIsDataSent(true);
           console.log('SUCCESS!');
-        },
-        (error) => {
-          setIsLoading(false)
-          setIsDataSent(false)
-          alert("An error Occurred, try again")
-          console.log('FAILED...', error.text);
-        },
-      );
+        } 
+      )
+      .catch((error) => {
+        setIsLoading(false)
+        setIsDataSent(false)
+        alert("An error Occurred, try again")
+        console.log('FAILED...', error);
+      });
   };
 
   return (
