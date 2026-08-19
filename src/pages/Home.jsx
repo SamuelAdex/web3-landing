@@ -41,7 +41,7 @@ const Home = () => {
 
       <main className='min-h-screen bg-white'>
         <Header />
-        <div className="md:mt-0 mt-28 mt-0">
+        <div className="md:mt-0 mt-0">
           <Register />
         </div>
         {/* <Hero /> */}
