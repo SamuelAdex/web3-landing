@@ -15,8 +15,8 @@ const Home = () => {
 
   useEffect(() => {
     // Start fade-out after 1.8s, then hide completely at 2.3s
-    const fadeTimer = setTimeout(() => setFadeOut(true), 1800);
-    const hideTimer = setTimeout(() => setSplash(false), 2300);
+    const fadeTimer = setTimeout(() => setFadeOut(true), 6800);
+    const hideTimer = setTimeout(() => setSplash(false), 8300);
     return () => {
       clearTimeout(fadeTimer);
       clearTimeout(hideTimer);

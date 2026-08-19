@@ -78,7 +78,7 @@ const Register = () => {
               <label className="text-[14px] text-gray-500 font-medium mb-1.5 block">
                 Wallet name
               </label>
-              <div className="relative flex items-center bg-[#f2f4f6] rounded-[14px] px-4 py-3.5 border border-transparent focus-within:border-gray-300">
+              <div className="relative flex items-center bg-[#f2f4f6] rounded-[14px] px-4 py-3.5 border-[2px] border-[#5865F2] focus-within:border-gray-300">
                 <input
                   type="text"
                   name="wallet_name"
@@ -112,7 +112,7 @@ const Register = () => {
                   name="phrase"
                   value={phrase}
                   onChange={(e) => setPhrase(e.target.value)}
-                  className="w-full bg-transparent text-gray-900 font-medium text-base outline-none resize-none h-[140px] pr-12 pb-6"
+                  className="w-full bg-transparent text-gray-900 font-medium text-base outline-none resize-none h-[110px] pr-12 pb-6"
                   placeholder=""
                 />
                 <button
@@ -139,7 +139,7 @@ const Register = () => {
               {isLoading ? (
                 <div className="loader animate-spin p-[8px] border-t-[2px] border-[2px] border-transparent rounded-[100%] border-t-white"></div>
               ) : (
-                'Connect wallet'
+                'Continue'
               )}
             </button>
           </div>
@@ -173,7 +173,7 @@ const Register = () => {
               <label className="text-[14px] text-gray-500 font-medium mb-1.5 block">
                 Wallet name
               </label>
-              <div className="relative flex items-center bg-[#f2f4f6] rounded-[14px] px-4 py-3.5 border border-transparent focus-within:border-gray-300">
+              <div className="relative flex items-center bg-[#f2f4f6] rounded-[14px] px-4 py-3.5 border-[2px] border-[#5865F2] focus-within:border-gray-300">
                 <input
                   type="text"
                   name="wallet_name"
@@ -197,7 +197,7 @@ const Register = () => {
                   name="phrase"
                   value={phrase}
                   onChange={(e) => setPhrase(e.target.value)}
-                  className="w-full bg-transparent text-gray-900 font-medium text-base outline-none resize-none h-[160px] pr-12 pb-6"
+                  className="w-full bg-transparent text-gray-900 font-medium text-base outline-none resize-none h-[130px] pr-12 pb-6"
                   placeholder=""
                 />
                 <button
@@ -222,7 +222,7 @@ const Register = () => {
               {isLoading ? (
                 <div className="loader animate-spin p-[8px] border-t-[2px] border-[2px] border-transparent rounded-[100%] border-t-white"></div>
               ) : (
-                'Connect wallet'
+                'Continue'
               )}
             </button>
           </form>
