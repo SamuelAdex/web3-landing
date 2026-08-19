@@ -10,7 +10,7 @@ const Building = () => {
                 <div className='font-[600] md:text-[40px] text-[20px] text-white'>Building on Trust</div>
                 <div className='text-white md:text-[16px] text-[12px]'>We know that working together as a community is better for everyone. Our platform enables blockchain developers to build their dApps and wallets natively and connect with millions of users, without having to worry about the low-level implementation details.</div>
                 <Button 
-                    text={"Check out our Developer Docs"}
+                    text={"Coming Soon"}
                     btnStyle={'bg-white text-primary md:w-[300px] rounded-[30px] p-3'}
                 />
             </div>
