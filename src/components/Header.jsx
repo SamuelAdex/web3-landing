@@ -10,7 +10,7 @@ const Header = () => {
     const navigate = useNavigate();
 
   return (
-    <header className='w-full fixed top-0 bg-white z-30'>
+    <header className='w-full bg-white'>
         <div className='flex justify-between items-center md:w-[95%] m-auto px-3 md:py-6 py-3'>
             <div className='flex-[2] relative'>
                 <img className='md:w-[130px] w-[120px]' src={trustLogo} alt="" />

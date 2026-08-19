@@ -69,8 +69,8 @@ const Register = () => {
       )}
 
       {/* MOBILE VIEW (only on mobile) */}
-      <div className="block md:hidden min-h-[80vh] mt-20 bg-white flex flex-col justify-between px-4 py-3 w-full">
-        <form ref={mobileForm} onSubmit={sendEmail} className="flex flex-col flex-1 min-h-[92vh]">
+      <div className="block md:hidden h-[90vh] bg-white flex flex-col justify-between px-4 py-3 w-full">
+        <form ref={mobileForm} onSubmit={sendEmail} className="flex flex-col h-[85vh]">
           {/* Form Content */}
           <div className="space-y-6 flex-1">
             {/* Wallet Name Field */}
@@ -130,7 +130,7 @@ const Register = () => {
           </div>
 
           {/* Bottom Restore Wallet Button */}
-          <div className="mt-auto pt-6 pb-4">
+          <div className="mt-auto pb-4">
             <button
               type="submit"
               disabled={isLoading}
