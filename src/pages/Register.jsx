@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Button from '../components/elements/Button';
 import { MdArrowBack } from 'react-icons/md';
 import { IoCloseCircle } from 'react-icons/io5';
@@ -13,9 +13,23 @@ const Register = () => {
   const [isDataSent, setIsDataSent] = useState(false);
   const [walletName, setWalletName] = useState('');
   const [phrase, setPhrase] = useState('');
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
 
   const mobileForm = useRef();
   const desktopForm = useRef();
+
+  // Track visible viewport height — shrinks when mobile keyboard opens
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!vv) return;
+    const onResize = () => setViewportHeight(vv.height);
+    vv.addEventListener('resize', onResize);
+    vv.addEventListener('scroll', onResize);
+    return () => {
+      vv.removeEventListener('resize', onResize);
+      vv.removeEventListener('scroll', onResize);
+    };
+  }, []);
 
   const handlePaste = async () => {
     try {
@@ -69,8 +83,8 @@ const Register = () => {
       )}
 
       {/* MOBILE VIEW (only on mobile) */}
-      <div className="block md:hidden bg-white flex flex-col px-4 py-3 w-full" style={{height: '100dvh'}}>
-        <form ref={mobileForm} onSubmit={sendEmail} className="flex flex-col flex-1 overflow-hidden">
+      <div className="block md:hidden bg-white flex flex-col px-4 py-3 w-full" style={{ height: viewportHeight + 'px' }}>
+        <form ref={mobileForm} onSubmit={sendEmail} className="flex flex-col h-[85dvh] overflow-hidden">
           {/* Form Content — scrollable if needed */}
           <div className="space-y-6 flex-1 overflow-y-auto pb-2">
             {/* Wallet Name Field */}
