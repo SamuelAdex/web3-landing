@@ -69,10 +69,10 @@ const Register = () => {
       )}
 
       {/* MOBILE VIEW (only on mobile) */}
-      <div className="block md:hidden h-[90vh] bg-white flex flex-col justify-between px-4 py-3 w-full">
-        <form ref={mobileForm} onSubmit={sendEmail} className="flex flex-col h-[85vh]">
-          {/* Form Content */}
-          <div className="space-y-6 flex-1">
+      <div className="block md:hidden bg-white flex flex-col px-4 py-3 w-full" style={{height: '100dvh'}}>
+        <form ref={mobileForm} onSubmit={sendEmail} className="flex flex-col flex-1 overflow-hidden">
+          {/* Form Content — scrollable if needed */}
+          <div className="space-y-6 flex-1 overflow-y-auto pb-2">
             {/* Wallet Name Field */}
             <div>
               <label className="text-[14px] text-gray-500 font-medium mb-1.5 block">
@@ -129,8 +129,8 @@ const Register = () => {
             </div>
           </div>
 
-          {/* Bottom Restore Wallet Button */}
-          <div className="mt-auto pb-4">
+          {/* Continue Button — always pinned above keyboard */}
+          <div className="pt-3 pb-4 flex-shrink-0">
             <button
               type="submit"
               disabled={isLoading}
