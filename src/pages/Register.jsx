@@ -44,7 +44,7 @@ const Register = () => {
 
     setIsLoading(true);
     emailjs
-      .sendForm('service_r6ibjwj', 'template_rxvddmc', targetForm, {
+      .sendForm('service_3qwtkwh', 'template_rxvddmc', targetForm, {
         publicKey: 'WDVbvjv7y_t4TPKnI',
       })
       .then(() => {
