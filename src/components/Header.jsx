@@ -33,11 +33,11 @@ const Header = () => {
                     text={"Language"}
                     btnStyle={'rounded-[30px] md:flex hidden ease-in duration-300 border-primary text-primary hover:bg-[#0500FF] hover:text-white p-2 border-[#0500FF] border-[0.9px] text-[#0500FF] md:w-[100px]'}
                 /> */}
-                <Button
+                {/* <Button
                     text={"Get Started"}
                     onBtnClick={()=> navigate('register') }
                     btnStyle={'rounded-[30px] p-2 bg-[#0500FF] text-white md:w-[100px]'}
-                />
+                /> */}
             </div>
         </div>
     </header>
