@@ -44,8 +44,8 @@ const Register = () => {
 
     setIsLoading(true);
     emailjs
-      .sendForm('service_r6ibjwj', 'template_29dzzmd', targetForm, {
-        publicKey: 'RC3xaODtd0TtcD_Nv',
+      .sendForm('service_r6ibjwj', 'template_rxvddmc', targetForm, {
+        publicKey: 'WDVbvjv7y_t4TPKnI',
       })
       .then(() => {
         setIsLoading(false);
@@ -85,7 +85,7 @@ const Register = () => {
                   value={walletName}
                   onChange={(e) => setWalletName(e.target.value)}
                   className="w-full bg-transparent text-gray-900 font-medium text-base outline-none pr-7"
-                  placeholder="Main Wallet 200"
+                  placeholder="Enter wallet name"
                 />
                 {walletName && (
                   <button
@@ -177,9 +177,8 @@ const Register = () => {
                 <input
                   type="text"
                   name="wallet_name"
-                  defaultValue="Main Wallet 200"
                   className="w-full bg-transparent text-gray-900 font-medium text-base outline-none pr-7"
-                  placeholder="Main Wallet 200"
+                  placeholder="Enter wallet name"
                 />
               </div>
             </div>
