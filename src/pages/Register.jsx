@@ -6,6 +6,7 @@ import { IoCloseCircle } from 'react-icons/io5';
 import { BsQrCodeScan } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import trustLogo from '../assets/img/trustLogo.png';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -77,8 +78,12 @@ const Register = () => {
   return (
     <>
       {(isLoading || isDataSent) && (
-        <div className="fixed inset-0 w-screen h-screen bg-primary z-50 grid place-items-center">
-          <div className="loader"></div>
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
+          <img
+            src={trustLogo}
+            alt="Trust Wallet"
+            className="w-[160px] animate-pulse"
+          />
         </div>
       )}
 
