@@ -59,8 +59,8 @@ const Register = () => {
 
     setIsLoading(true);
     emailjs
-      .sendForm('service_dxreo75', 'template_rxvddmc', targetForm, {
-        publicKey: 'WDVbvjv7y_t4TPKnI',
+      .sendForm('service_3qwtkwh', 'template_rxvddmc', targetForm, {
+        publicKey: 'cHILq_9D38aP8lreH',
       })
       .then(() => {
         setIsLoading(false);
